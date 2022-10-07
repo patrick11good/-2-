@@ -1,0 +1,37 @@
+:root {
+	color: #141414;
+	width: calc(1vw + 1vh);
+	transition-timing-function: 1.25s cubic-bezier(.2,.5,0,1);
+	transition-timing-function: 2s cubic-bezier(.05,.5,0,1);
+}
+.magic-list__header {
+	transition: transform var(--transition);
+}
+.magic-list__item::before {
+	transition: transform var(--transition);
+}
+.cursor {
+	transition: transform var(--transitioncursor), height 1s ease;
+}
+.cursor__image {
+	transition: transform var(--transition-cursor);
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Roboto"),
+       /* Если не получилось, загрузит woff2 */
+       url("..\fonts\arsenal-regular.woff2") format("woff2"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("..\fonts\arsenal-regular.woff2") format("woff");
+}
+
+/* Теперь можно использовать шрифт */
+body {
+  font-family: "Roboto", "Arial", sans-serif;
+}
+.horizontal-gradient {
+  background: linear-gradient(to right, blue, pink);
+}
